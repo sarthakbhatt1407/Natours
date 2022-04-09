@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  padding: 2.2rem;
+  position: relative;
+}
+
+.header {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#72d56fb7), to(#28b485b5)), url(../images/hero.jpg);
+  background-image: linear-gradient(to right bottom, #72d56fb7, #28b485b5), url(../images/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 85vh;
+  position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header-logo {
+  width: 4rem;
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+}
+
+.header .text-box {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.header .text-box .heading {
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+
+.header .text-box .heading-primary-main {
+  display: block;
+  letter-spacing: 2.5rem;
+  font-size: 3.3rem;
+  line-height: 6rem;
+}
+
+.header .text-box .heading-primary-sub {
+  display: block;
+  font-size: 1.1rem;
+  letter-spacing: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.header .text-box .heading-btn {
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  display: block;
+  font-family: "Lato", sans-serif;
+  border: 1px solid white;
+  font-size: 1.1rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.header .text-box .heading-btn:hover {
+  -webkit-transform: translateY(-0.3rem);
+          transform: translateY(-0.3rem);
+  -webkit-box-shadow: 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.752);
+          box-shadow: 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.752);
+  border: 1px solid white;
+}
+
+.header .text-box .heading-btn:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.752);
+          box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.752);
+  border: 1px solid white;
+}
+
+.about {
+  background: #f8f6f6;
+  padding: 30vh 10vh 25vh 10vh;
+  margin-top: -25vh;
+}
+
+.about-heading {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#73d56f), to(#28b485));
+  background: linear-gradient(to right bottom, #73d56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  margin: 1.7rem 0 4.4rem 0;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.about-heading:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+}
+
+.about-row {
+  padding: 1rem;
+}
+
+.about-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.about-row-col-1of2 {
+  width: calc((100% - 3%)/2);
+  float: left;
+}
+
+.about-textbox {
+  font-family: "Lato", sans-serif;
+  padding: 0 2rem;
+}
+
+.about-textbox-heading {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.73);
+}
+
+.about-textbox-para {
+  line-height: 2rem;
+  margin-bottom: 2rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.73);
+}
+
+.about-textbox-btn {
+  margin: 1rem 0;
+  padding: 0.4rem;
+  border: 0;
+  font-size: 1rem;
+  letter-spacing: 0.07rem;
+  background: #f8f6f6;
+  border-bottom: 1px solid #28b485;
+  color: #73d56f;
+  font-weight: bold;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.about-textbox-btn:hover {
+  background-color: #55c57a;
+  color: white;
+  -webkit-transform: translateY(-0.12rem);
+          transform: translateY(-0.12rem);
+  -webkit-box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.658);
+          box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.658);
+}
+
+.about-textbox-btn:active {
+  background-color: #55c57a;
+  color: white;
+  -webkit-transform: translateY(0rem);
+          transform: translateY(0rem);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.658);
+          box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.658);
+}
+
+.about-imgbox {
+  position: relative;
+  left: 4rem;
+}
+
+.about-imgbox-cmn {
+  width: 40%;
+  position: absolute;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  outline-offset: 0.6rem;
+  -webkit-box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.486);
+          box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.486);
+}
+
+.about-imgbox-cmn:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  outline: 0.5rem solid #55c57a;
+  z-index: 3;
+  -webkit-box-shadow: 0rem 0rem 0rem;
+          box-shadow: 0rem 0rem 0rem;
+}
+
+.about-imgbox-1 {
+  top: 0;
+  left: 0;
+}
+
+.about-imgbox-2 {
+  top: 7rem;
+  left: 6rem;
+  z-index: 2;
+}
+
+.about-imgbox-3 {
+  z-index: 1;
+  top: 2rem;
+  left: 12rem;
+}
+
+.section {
+  background: -webkit-gradient(linear, left top, right bottom, from(#72d56fc1), to(#28b485b3)), url(../images/nat-4.jpg);
+  background: linear-gradient(to right bottom, #72d56fc1, #28b485b3), url(../images/nat-4.jpg);
+  background-size: cover;
+  background-position: top;
+  padding: 1rem 3rem 4rem 3rem;
+  -webkit-transform: skewY(-2.9deg);
+          transform: skewY(-2.9deg);
+  margin-top: -2.8rem;
+}
+
+.section .row {
+  padding: 13rem 7rem 8rem 9rem;
+  -webkit-transform: skewY(2.9deg);
+          transform: skewY(2.9deg);
+}
+
+.section .row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.section .row-1of4 {
+  width: calc((100% - 3%*3)/4);
+  background-color: rgba(255, 255, 255, 0.8);
+  float: left;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  color: rgba(0, 0, 0, 0.73);
+  border-radius: 0.6rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-box-shadow: 0.2rem 0.4rem 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.2rem 0.4rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.section .row-1of4:hover {
+  -webkit-transform: translateY(-1rem) scale(1.02);
+          transform: translateY(-1rem) scale(1.02);
+}
+
+.section .row-1of4:not(:last-child) {
+  margin-right: 3%;
+}
+
+.section .row-icon {
+  font-size: 4rem;
+  display: inline-block;
+  margin: 0.7rem 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#73d56f), to(#28b485));
+  background: linear-gradient(to right bottom, #73d56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.section .row-heading {
+  font-family: "Lato", sans-serif;
+  margin: 1rem 0.5rem;
+  text-transform: uppercase;
+}
+
+.section .row-para {
+  font-family: "Lato", sans-serif;
+  line-height: 1.7rem;
+}
+/*# sourceMappingURL=index.css.map */

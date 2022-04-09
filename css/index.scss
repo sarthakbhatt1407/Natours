@@ -1,0 +1,297 @@
+$light-green : #73d56f;
+$light-green-opacity: #72d56fc1;
+$medium-green : #55c57a;
+$dark-green : #28b485;
+$dark-green-opacity : #28b485b3;
+$font-family: 'Lato',
+sans-serif;
+$gap : 3%;
+
+
+@mixin clearfix {
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    padding: 2.2rem;
+    position: relative;
+}
+
+.header {
+    background-image: linear-gradient(to right bottom, #72d56fb7, #28b485b5), url(../images/hero.jpg);
+
+    background-size: cover;
+    background-position: top;
+    height: 85vh;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &-logo {
+        width: 4rem;
+        position: absolute;
+        top: 1.5rem;
+        left: 1.5rem;
+    }
+
+    .text-box {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        color: white;
+        text-transform: uppercase;
+        transform: translate(-50%, -50%);
+
+        .heading {
+            text-align: center;
+            font-family: $font-family;
+
+            &-primary {
+                &-main {
+                    display: block;
+                    letter-spacing: 2.5rem;
+                    font-size: 3.3rem;
+                    line-height: 6rem;
+                }
+
+                &-sub {
+                    display: block;
+                    font-size: 1.1rem;
+                    letter-spacing: 0.9rem;
+                    line-height: 1.5rem;
+                    margin-bottom: 3rem;
+                }
+            }
+
+            &-btn {
+                padding: 0.5rem 1rem;
+                margin: 0 auto;
+                display: block;
+                font-family: $font-family;
+                border: 1px solid white;
+                font-size: 1.1rem;
+                border-radius: 1rem;
+                text-transform: uppercase;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    transform: translateY(-0.3rem);
+                    box-shadow: 0.25rem 0.35rem 0.5rem rgba(0, 0, 0, 0.752);
+                    border: 1px solid white;
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.752);
+                    border: 1px solid white;
+                }
+
+            }
+        }
+    }
+}
+
+.about {
+    background: rgb(248, 246, 246);
+    padding: 30vh 10vh 25vh 10vh;
+    margin-top: -25vh;
+
+
+    &-heading {
+        text-align: center;
+        background: linear-gradient(to right bottom, $light-green, $dark-green);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        margin: 1.7rem 0 4.4rem 0;
+        font-family: $font-family;
+
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.13);
+        }
+    }
+
+    &-row {
+        padding: 1rem;
+
+        @include clearfix;
+
+        &-col-1of2 {
+            width: calc((100% - #{$gap})/2);
+            float: left;
+
+
+        }
+    }
+
+    &-textbox {
+
+        font-family: $font-family;
+        padding: 0 2rem;
+
+        &-heading {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: rgba(0, 0, 0, 0.73);
+
+        }
+
+        &-para {
+            line-height: 2rem;
+            margin-bottom: 2rem;
+            font-size: 0.8rem;
+            color: rgba(0, 0, 0, 0.73);
+        }
+
+        &-btn {
+            margin: 1rem 0;
+            padding: 0.4rem;
+            border: 0;
+            font-size: 1rem;
+            letter-spacing: 0.07rem;
+            background: rgb(248, 246, 246);
+            border-bottom: 1px solid $dark-green;
+            color: $light-green;
+            font-weight: bold;
+            font-family: $font-family;
+            cursor: pointer;
+            transition: all 0.2s;
+
+
+            &:hover {
+                background-color: $medium-green;
+                color: white;
+                transform: translateY(-0.12rem);
+                box-shadow: 0.2rem 0.2rem 0.4rem rgba(0, 0, 0, 0.658);
+
+            }
+
+            &:active {
+                background-color: $medium-green;
+                color: white;
+                transform: translateY(0rem);
+                box-shadow: 0.1rem 0.1rem 0.2rem rgba(0, 0, 0, 0.658);
+
+            }
+        }
+    }
+
+    &-imgbox {
+        position: relative;
+        left: 4rem;
+
+
+        &-cmn {
+            width: 40%;
+            position: absolute;
+            transition: all 0.2s;
+            outline-offset: 0.6rem;
+            box-shadow: 0.4rem 0.4rem 0.5rem rgba(0, 0, 0, 0.486);
+
+            &:hover {
+
+                transform: scale(1.2);
+                outline: 0.5rem solid $medium-green;
+                z-index: 3;
+                box-shadow: 0rem 0rem 0rem;
+            }
+
+
+        }
+
+
+
+        &-1 {
+            top: 0;
+            left: 0;
+
+        }
+
+        &-2 {
+            top: 7rem;
+            left: 6rem;
+            z-index: 2;
+        }
+
+        &-3 {
+            z-index: 1;
+            top: 2rem;
+            left: 12rem;
+        }
+    }
+
+
+}
+
+.section {
+    background: linear-gradient(to right bottom, $light-green-opacity, $dark-green-opacity), url(../images/nat-4.jpg);
+    background-size: cover;
+    background-position: top;
+    padding: 1rem 3rem 4rem 3rem;
+    transform: skewY(-2.9deg);
+    margin-top: -2.8rem;
+
+    .row {
+        @include clearfix;
+        padding: 13rem 7rem 8rem 9rem;
+        transform: skewY(2.9deg);
+
+        &-1of4 {
+            width: calc((100% - #{$gap}*3)/4);
+            background-color: rgba($color: white, $alpha: 0.8);
+            float: left;
+            text-align: center;
+            padding: 2rem 0.5rem;
+            color: rgba(0, 0, 0, 0.73);
+            border-radius: 0.6rem;
+            transition: all 0.2s;
+            box-shadow: 0.2rem 0.4rem 0.5rem rgba(0, 0, 0, 0.5);
+
+            &:hover {
+                transform: translateY(-1rem) scale(1.02);
+            }
+
+
+            &:not(:last-child) {
+                margin-right: $gap;
+            }
+        }
+
+        &-icon {
+            font-size: 4rem;
+            display: inline-block;
+            margin: 0.7rem 0;
+            background: linear-gradient(to right bottom, $light-green, $dark-green);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &-heading {
+            font-family: $font-family;
+            margin: 1rem 0.5rem;
+            text-transform: uppercase;
+
+
+
+        }
+
+        &-para {
+            font-family: $font-family;
+            line-height: 1.7rem;
+        }
+    }
+}
