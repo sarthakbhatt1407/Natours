@@ -6,7 +6,7 @@
 }
 
 body {
-  padding: 2.2rem;
+  padding: 2rem;
   position: relative;
 }
 
@@ -186,7 +186,7 @@ body {
 }
 
 .about-imgbox-cmn {
-  width: 40%;
+  width: 17rem;
   position: absolute;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -286,5 +286,224 @@ body {
 .section .row-para {
   font-family: "Lato", sans-serif;
   line-height: 1.7rem;
+}
+
+.pricing {
+  margin-top: -2.3rem;
+  padding-top: 7.4rem;
+  background: #f8f6f6;
+}
+
+.pricing-heading {
+  text-align: center;
+  background: -webkit-gradient(linear, left top, right bottom, from(#73d56f), to(#28b485));
+  background: linear-gradient(to right bottom, #73d56f, #28b485);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.pricing-heading:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+}
+
+.pricing-row {
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+.pricing-row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.pricing-row-clm {
+  width: calc((100% - 3%*2)/3);
+  float: left;
+  height: calc((100% - 3%*2)/3);
+}
+
+.card {
+  -webkit-perspective: 150rem;
+          perspective: 150rem;
+  width: 15rem;
+  height: 35em;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+}
+
+.card-cmn {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  -webkit-box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.2rem 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+  height: 29rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  width: 15rem;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card-frnt {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  background: white;
+  overflow: hidden;
+}
+
+.card-frnt-img-cmn {
+  background-size: cover;
+  background-position: top;
+  height: 45%;
+  border-radius: 0.5rem 0.5rem 0 0;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.card-frnt-img-1 {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(236, 157, 10, 0.323)), to(rgba(255, 166, 0, 0.489))), url(../images/nat-5.jpg);
+  background-image: linear-gradient(to right, rgba(236, 157, 10, 0.323), rgba(255, 166, 0, 0.489)), url(../images/nat-5.jpg);
+}
+
+.card-frnt-img-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#8ce589b7), to(#48c299b5)), url(../images/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #8ce589b7, #48c299b5), url(../images/nat-6.jpg);
+}
+
+.card-frnt-img-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(95, 95, 233, 0.4)), color-stop(rgba(81, 81, 240, 0.622)), to(#28b485b5)), url(../images/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, rgba(95, 95, 233, 0.4), rgba(81, 81, 240, 0.622), #28b485b5), url(../images/nat-7.jpg);
+}
+
+.card-frnt-heading-cmn {
+  text-transform: uppercase;
+  position: absolute;
+  top: 6.3rem;
+  left: 6rem;
+  font-size: 1.3rem;
+}
+
+.card-frnt-heading-1 {
+  background: -webkit-gradient(linear, left top, right top, from(rgba(236, 157, 10, 0.823)), to(rgba(255, 166, 0, 0.889)));
+  background: linear-gradient(to right, rgba(236, 157, 10, 0.823), rgba(255, 166, 0, 0.889));
+}
+
+.card-frnt-heading-2 {
+  background: -webkit-gradient(linear, left top, right bottom, from(#69db65b7), to(#21cc93b5));
+  background: linear-gradient(to right bottom, #69db65b7, #21cc93b5);
+}
+
+.card-frnt-heading-3 {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(66, 66, 232, 0.8)), to(rgba(48, 48, 241, 0.822)));
+  background: linear-gradient(to right bottom, rgba(66, 66, 232, 0.8), rgba(48, 48, 241, 0.822));
+  left: 4rem;
+}
+
+.card-frnt ul {
+  list-style: none;
+  padding: 1rem 3rem;
+}
+
+.card-frnt ul li {
+  font-family: "Lato", sans-serif;
+  padding: 0.6rem;
+}
+
+.card-frnt ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(138, 137, 137, 0.226);
+}
+
+.card-bck {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  text-align: center;
+  color: white;
+}
+
+.card-bck-textbox {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.card-bck-textbox p {
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-family: "Lato", sans-serif;
+}
+
+.card-bck-textbox h3 {
+  margin: 2rem;
+  font-size: 3rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 100;
+}
+
+.card-bck-textbox button {
+  margin: 2rem;
+  padding: 1rem;
+  width: 7rem;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 1rem;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.card-bck-textbox button:hover {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+  -webkit-box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.2rem 0.2rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-bck-textbox button:active {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.card-bck-1 {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(243, 160, 6, 0.423)), to(rgba(255, 166, 0, 0.889)));
+  background: linear-gradient(to right bottom, rgba(243, 160, 6, 0.423), rgba(255, 166, 0, 0.889));
+}
+
+.card-bck-2 {
+  background: -webkit-gradient(linear, left top, right bottom, from(#7be277b7), to(#35dba4b5));
+  background: linear-gradient(to right bottom, #7be277b7, #35dba4b5);
+}
+
+.card-bck-3 {
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(66, 66, 232, 0.4)), to(rgba(48, 48, 241, 0.822)));
+  background: linear-gradient(to right bottom, rgba(66, 66, 232, 0.4), rgba(48, 48, 241, 0.822));
+}
+
+.card:hover .card-frnt {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.card:hover .card-bck {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
 }
 /*# sourceMappingURL=index.css.map */

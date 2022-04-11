@@ -6,6 +6,8 @@ $dark-green-opacity : #28b485b3;
 $font-family: 'Lato',
 sans-serif;
 $gap : 3%;
+$page-bg : rgb(248, 246, 246);
+
 
 
 @mixin clearfix {
@@ -24,7 +26,7 @@ $gap : 3%;
 }
 
 body {
-    padding: 2.2rem;
+    padding: 2rem;
     position: relative;
 }
 
@@ -196,7 +198,7 @@ body {
 
 
         &-cmn {
-            width: 40%;
+            width: 17rem;
             position: absolute;
             transition: all 0.2s;
             outline-offset: 0.6rem;
@@ -293,5 +295,204 @@ body {
             font-family: $font-family;
             line-height: 1.7rem;
         }
+    }
+}
+
+.pricing {
+
+    margin-top: -2.3rem;
+    padding-top: 7.4rem;
+    background: $page-bg;
+
+    &-heading {
+        text-align: center;
+        background: linear-gradient(to right bottom, $light-green, $dark-green);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-transform: uppercase;
+        font-family: $font-family;
+
+        transition: all 0.2s;
+
+        &:hover {
+            transform: scale(1.13);
+        }
+    }
+
+    &-row {
+        position: relative;
+        @include clearfix;
+        padding-bottom: 10rem;
+
+        &-clm {
+            width: calc((100% - #{$gap}*2)/3);
+            float: left;
+            height: calc((100% - #{$gap}*2)/3);
+
+        }
+    }
+
+}
+
+.card {
+    perspective: 150rem;
+    width: 15rem;
+    height: 35em;
+    transition: all 0.8s ease;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+
+
+    &-cmn {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        box-shadow: 0.2rem 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.5);
+        transform: translate(-50%, -50%);
+        transition: all 0.9s;
+        height: 29rem;
+        text-align: center;
+        border-radius: 0.5rem;
+        width: 15rem;
+        backface-visibility: hidden;
+    }
+
+    &-frnt {
+        transform: rotateY(0);
+        background: white;
+        overflow: hidden;
+
+        &-img-cmn {
+            background-size: cover;
+            background-position: top;
+            height: 45%;
+            border-radius: 0.5rem 0.5rem 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+
+        &-img-1 {
+            background-image: linear-gradient(to right, rgba(236, 157, 10, 0.323), rgba(255, 166, 0, 0.489)), url(../images/nat-5.jpg);
+        }
+
+        &-img-2 {
+            background-image: linear-gradient(to right bottom, #8ce589b7, #48c299b5), url(../images/nat-6.jpg);
+        }
+
+        &-img-3 {
+            background-image: linear-gradient(to right bottom, rgba(95, 95, 233, 0.4), rgba(81, 81, 240, 0.622), #28b485b5), url(../images/nat-7.jpg);
+        }
+
+        &-heading-cmn {
+            text-transform: uppercase;
+            position: absolute;
+            top: 6.3rem;
+            left: 6rem;
+            font-size: 1.3rem;
+        }
+
+        &-heading-1 {
+            background: linear-gradient(to right, rgba(236, 157, 10, 0.823), rgba(255, 166, 0, 0.889));
+        }
+
+        &-heading-2 {
+            background: linear-gradient(to right bottom, #69db65b7, #21cc93b5);
+        }
+
+        &-heading-3 {
+            background: linear-gradient(to right bottom, rgba(66, 66, 232, 0.8), rgba(48, 48, 241, 0.822));
+
+            left: 4rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 1rem 3rem;
+
+            li {
+                font-family: $font-family;
+                padding: 0.6rem;
+
+            }
+
+            li:not(:last-child) {
+                border-bottom: 1px solid rgba(138, 137, 137, 0.226);
+
+            }
+        }
+
+    }
+
+    &-bck {
+        transform: rotateY(-180deg);
+        text-align: center;
+        color: white;
+
+        &-textbox {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            p {
+                margin: 3rem;
+                font-size: 1.5rem;
+                font-family: $font-family;
+            }
+
+            h3 {
+                margin: 2rem;
+                font-size: 3rem;
+                font-family: $font-family;
+                font-weight: 100;
+            }
+
+            button {
+                margin: 2rem;
+                padding: 1rem;
+                width: 7rem;
+                background-color: white;
+                border: 1px solid white;
+                border-radius: 1rem;
+                font-family: $font-family;
+                cursor: pointer;
+                transition: all 0.2s;
+
+                &:hover {
+                    transform: translateY(-0.2rem);
+                    box-shadow: 0.2rem 0.2rem 0.5rem rgba($color: #000000, $alpha: 0.5);
+                }
+
+                &:active {
+                    transform: translateY(0);
+                    box-shadow: 0.1rem 0.1rem 0.5rem rgba($color: #000000, $alpha: 0.5);
+                }
+            }
+        }
+
+
+    }
+
+    &-bck-1 {
+
+        background: linear-gradient(to right bottom, rgba(243, 160, 6, 0.423), rgba(255, 166, 0, 0.889));
+    }
+
+    &-bck-2 {
+
+        background: linear-gradient(to right bottom, #7be277b7, #35dba4b5);
+    }
+
+    &-bck-3 {
+
+        background: linear-gradient(to right bottom, rgba(66, 66, 232, 0.4), rgba(48, 48, 241, 0.822));
+    }
+
+    &:hover &-frnt {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &-bck {
+        transform: rotateY(0);
     }
 }
